@@ -1,0 +1,66 @@
+;; .emacs
+
+;;; uncomment this line to disable loading of "default.el" at startup
+;; (setq inhibit-default-init t)
+
+;; enable visual feedback on selections
+;(setq transient-mark-mode t)
+
+;; default to better frame titles
+(setq frame-title-format
+      (concat  "%b - emacs@" (system-name)))
+
+;; default to unified diffs
+(setq diff-switches "-u")
+
+;; always end a file with a newline
+;(setq require-final-newline 'query)
+
+;;; uncomment for CJK utf-8 support for non-Asian users
+;; (require 'un-define)
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(initial-buffer-choice nil))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(default ((t (:stipple nil :background "gray10" :foreground "LavenderBlush1" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :foundry "unknown" :family "DejaVu Sans Mono")))))
+
+
+;; following stuff comes from the link:
+;; https://www.masteringemacs.org/article/beginners-guide-to-emacs
+
+;; line numbers
+(global-linum-mode 1)
+
+;; IDO Mode (understand this stuff a little better)
+;; (ido-mode 1)
+;; (setq ido-enable-flex-matching t)
+;; (setq ido-everywhere t)
+
+
+
+;; auto indent on carraige return
+(define-key global-map (kbd "RET") 'newline-and-indent)
+
+
+
+;; hiding splash screen and banner
+(setq inhibit-startup-message t
+inhibit-startup-echo-area-message t)
+
+;; get .customemacs and .custombashrc to have the right syntax highlighting
+(add-to-list 'auto-mode-alist '(".custombashrc\\'" . sh-mode))
+(add-to-list 'auto-mode-alist '(".customemacs\\'" . emacs-lisp-mode))
+
+
+;; ESS good stuff
+;; (add-to-list 'load path "/home/b1sxv08/ess/ESS/lisp/")
+;; (require 'ess-site)
+
+
