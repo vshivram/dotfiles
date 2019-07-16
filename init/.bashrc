@@ -2,4 +2,4 @@
 # Place this in your home directory for initializtion
 
 # .bashrc
-source ~/dotfiles/.bashrc
+source ~/dotfiles/.custombashrc

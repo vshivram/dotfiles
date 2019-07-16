@@ -11,8 +11,6 @@ export EDITOR=emacs
 export TERM=xterm-color
 
 
-
-
 # navigation
 alias ..='\cd ..'
 alias ...='\cd ../..'
@@ -29,6 +27,8 @@ alias ld='ls -d */'
 alias ll='ls -l -h'
 alias lt='ll --sort=t'
 alias lth='ll --sort=t | head'
+alias lsh='ls *.sh'
+
 
 # Hide files from ls
 hide="--hide='*.aux' --hide='*.bbl' --hide='*.blg' --hide='*.fls' --hide='*.log' --hide='*.nav' --hide='*.out' --hide='*.snm' --hide='*.thm' --hide='*.toc' --hide='*~' --hide='*.fdb_latexmk' --hide='*.synctex.gz'"
@@ -78,6 +78,8 @@ alias grm="git rm"
 alias gu="git reset HEAD"
 alias gitlog="git log --oneline"
 alias gpull='git pull --rebase'
+alias gt='git tag'
+
 
 # tmux
 alias tmuxn='tmux new -s'
@@ -109,6 +111,7 @@ umask 0002
 
 # Stop graphical display popup for password when git pushing
 unset SSH_ASKPASS
+
 
 # Display commands for tmux cluster jobs
 source ~/dotfiles/ATT57158.bashrc-display-scripts
